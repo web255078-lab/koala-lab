@@ -1,5 +1,5 @@
 // 第3章 音を整える
-import { createChapter, $, $$, sleep } from './core/klesson.js';
+import { createChapter, $, $$, sleep, shuffle } from './core/klesson.js';
 import { synth } from './core/synth.js';
 import { loadKit, playPad, stopPad, bufferOf, drawWave } from './core/kitplayer.js';
 
@@ -186,7 +186,7 @@ $('#chokePlay').addEventListener('click', async (e) => {
   start.addEventListener('click', async () => {
     await kit();
     const base = ['normal', 'reverse', 'up', 'down'];
-    order = [...base, ...base.sort(() => Math.random() - 0.5).slice(0, 2)].sort(() => Math.random() - 0.5);
+    order = shuffle([...base, ...shuffle(base).slice(0, 2)]);
     i = 0; correct = 0; marks = [];
     replay.disabled = ref.disabled = false;
     draw();

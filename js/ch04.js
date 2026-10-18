@@ -1,5 +1,5 @@
 // 第4章 ビートを打ち込む
-import { createChapter, $, $$, sleep } from './core/klesson.js';
+import { createChapter, $, $$, sleep, shuffle } from './core/klesson.js';
 import { synth } from './core/synth.js';
 import { settings } from './core/store.js';
 import { loadKit } from './core/kitplayer.js';
@@ -58,7 +58,8 @@ $('#practiceBtn').addEventListener('click', async (e) => {
   };
   $('#practiceGrid').innerHTML = `<p class="muted"><small>叩いた音を、いちばん近いマスに寄せると（＝クオンタイズ）：緑＝ねらいどおり、赤＝ちがうマス、灰色の枠＝叩けなかったマス</small></p>${row('kick', 'キック')}${row('snare', 'スネア')}`;
   lastAvg = averageOffset(res);
-  $('#calibBtn').hidden = lastAvg === null || Math.abs(lastAvg) < 40;
+  $('#calibBtn').hidden = lastAvg === null || Math.abs(lastAvg) < (res.score < 70 ? 25 : 40);
+  $('#calibBtn').classList.toggle('pulse', res.score < 70 && !$('#calibBtn').hidden);
   if (res.score >= 70) ch.clear('drum');
 });
 $('#calibBtn').addEventListener('click', (e) => {
@@ -174,7 +175,7 @@ $('#swing').addEventListener('input', (e) => {
   }));
   start.addEventListener('click', async () => {
     await kit();
-    order = ['swing', 'swing', 'swing', 'straight', 'straight', 'straight'].sort(() => Math.random() - 0.5);
+    order = shuffle(['swing', 'swing', 'swing', 'straight', 'straight', 'straight']);
     i = 0; correct = 0; marks = [];
     draw();
     ask();

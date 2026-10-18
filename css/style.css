@@ -370,3 +370,13 @@ pre.preview { white-space: pre-wrap; font-size: 0.8rem; background: var(--surfac
 .v-row ol { padding-left: 1.3em; }
 .verify details summary { cursor: pointer; font-weight: 700; margin: 4px 0; }
 .verify .memo textarea { background: var(--surface); }
+
+.koala-todo { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 8px 12px; margin: 6px 0 10px; font-weight: 700; }
+.koala-todo b { display: block; font-size: 0.78rem; color: var(--accent); }
+.koala-todo small { display: block; font-weight: 400; color: var(--muted); font-size: 0.75rem; margin-top: 2px; }
+.task .dots i.ok::after { content: "✓"; }
+.task .dots i.ng::after { content: "✗"; }
+.task .dots i { color: #fff; font-size: 9px; line-height: 12px; text-align: center; font-style: normal; }
+
+@keyframes pulse { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 35%, transparent); } }
+.btn.pulse { animation: pulse 1.2s ease-in-out 3; }

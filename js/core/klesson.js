@@ -10,6 +10,15 @@ setTaskAliases(TASK_ALIASES);
 export const $ = (s, r = document) => r.querySelector(s);
 export const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// 偏りのない並べ替え（Fisher–Yates）
+export function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 export const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 export function mountShell({ root = '.', title = '' } = {}) {
@@ -48,6 +57,7 @@ export function createChapter(o) {
   mountShell({ root: '..', title: o.title });
 
   mountVerifies();
+  document.querySelectorAll('.feedback').forEach((f) => f.setAttribute('aria-live', 'polite'));
   const isDone = (id) => !!progress.chapter(CH).tasks[id];
 
   function renderProgress() {
@@ -118,7 +128,7 @@ export function createChapter(o) {
   }
 
   // ---- 選択クイズ：questions = [{q, options:[...], answer: index, explain}] ----
-  function quiz(id, questions, { need = questions.length, shuffle = true } = {}) {
+  function quiz(id, questions, { need = questions.length, shuffle: shuffleQ = true } = {}) {
     const el = document.querySelector(`[data-task="${id}"]`);
     const box = $('[data-quiz]', el), fb = $('.feedback', el), st = $('.status', el), dots = $('.dots', el);
     const start = $('[data-start]', el);
@@ -128,7 +138,7 @@ export function createChapter(o) {
       const q = questions[order[i]];
       st.textContent = `${i + 1} / ${order.length}`;
       // 選択肢は毎回並べ替える（いつも同じ位置が正解にならないように）。data-k は元の番号
-      const shown = q.options.map((_, k) => k).sort(() => Math.random() - 0.5);
+      const shown = shuffle(q.options.map((_, k) => k));
       box.innerHTML = `<p class="quiz-q quiz-q-sm">${q.q}</p><div class="btn-row">${shown.map((k) => `<button class="chip" data-k="${k}">${q.options[k]}</button>`).join('')}</div>`;
       fb.textContent = ''; fb.className = 'feedback';
     }
@@ -158,7 +168,7 @@ export function createChapter(o) {
     });
     start.addEventListener('click', () => {
       order = questions.map((_, k) => k);
-      if (shuffle) order.sort(() => Math.random() - 0.5);
+      if (shuffleQ) order = shuffle(order);
       i = 0; correct = 0; marks = [];
       drawDots();
       ask();

@@ -1,5 +1,5 @@
 // 第2章 音を集める
-import { createChapter, $, $$, sleep } from './core/klesson.js';
+import { createChapter, $, $$, sleep, shuffle } from './core/klesson.js';
 import { synth } from './core/synth.js';
 import { KIT } from './core/kit.js';
 import { render, toWav, download } from './core/wav.js';
@@ -97,7 +97,7 @@ renderKit();
   });
   start.addEventListener('click', async () => {
     await synth.start();
-    order = [...POOL].sort(() => Math.random() - 0.5);
+    order = shuffle(POOL);
     i = 0; correct = 0; marks = [];
     draw();
     ask();

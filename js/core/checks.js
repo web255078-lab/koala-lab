@@ -56,12 +56,12 @@ export const VERIFY = [
     affects: '第3章の「何が起きたか」を、Koala でも同じと書くか、ブラウザとの違いとして書くかを決めます。',
   },
   {
-    id: 'kbd', ch: '第5章 5-1', title: 'KEYBOARD のメニューと、モードの名前',
-    unknown: 'SEQUENCE の画面のどこに KEYBOARD があり、どんなモード名が並ぶか。',
-    why: 'マニュアルにはモードの種類（Grid、Keyboard など）は書かれていますが、スマホの画面のどこにあるかは書かれていません。',
-    steps: ['SAMPLE でベースのパッドを選んでから SEQUENCE へ', '「KEYBOARD」と書かれたボタン（または鍵盤のマーク）を探して押す', '出てきたモードの名前をメモする'],
+    id: 'kbd', ch: '第5章 5-1', title: 'KEYBOARD のメニューの場所',
+    unknown: 'SEQUENCE の画面のどこに KEYBOARD のメニューがあるか。',
+    why: 'マニュアルにはモードの種類（GRID・KEYBOARD・VELOCITY・NOTE REPEAT）は書かれていますが、スマホの画面のどこにメニューがあるかは書かれていません。',
+    steps: ['SAMPLE でベースのパッドを選んでから SEQUENCE へ', '「KEYBOARD」と書かれたボタン（または鍵盤のマーク）を探して押す', 'モードの一覧が出たら、その場所を下で選ぶ'],
     options: ['すぐ見つかった', '見つけにくかった（場所をメモに）', '見つからなかった'],
-    memo: 'モードの名前（例：Grid, Keyboard, Velocity …）',
+    memo: 'ボタンがあった場所（例：SEQUENCE の右下）',
     affects: '第5章の手順を具体的にします。',
   },
   {

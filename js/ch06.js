@@ -1,5 +1,5 @@
 // 第6章 展開とエフェクト
-import { createChapter, $, $$, sleep, esc } from './core/klesson.js';
+import { createChapter, $, $$, sleep, esc, shuffle } from './core/klesson.js';
 import { synth } from './core/synth.js';
 import { read, write } from './core/store.js';
 import { reverbIR } from './core/fx.js';
@@ -98,6 +98,8 @@ $('#planSave').addEventListener('click', () => {
   if (plan.length < 6) miss.push(`あと ${6 - plan.length} ブロック`);
   if (!plan.includes('brk')) miss.push('ブレイクを入れる');
   if (!plan.includes('sabi')) miss.push('サビを入れる');
+  if (plan[0] !== 'intro') miss.push('最初をイントロに');
+  if (plan[plan.length - 1] !== 'outro') miss.push('最後をアウトロに');
   if (miss.length) { fb.textContent = `あと少し：${miss.join('／')}`; fb.className = 'feedback ng'; return; }
   write('plan', plan);
   fb.textContent = `決定！ ${plan.map((k) => BLOCKS[k].name).join(' → ')}（Koala で4小節ずつ並べると約${Math.round(plan.length * 16 * (60 / 90))}秒）`;
@@ -264,7 +266,7 @@ $('#fxLoop').addEventListener('click', async (e) => {
   start.addEventListener('click', async () => {
     await kit();
     $('#fxLoop').textContent = '▶ ループを流す';
-    order = Object.keys(NAME).sort(() => Math.random() - 0.5);
+    order = shuffle(Object.keys(NAME));
     i = 0; correct = 0; marks = [];
     draw();
     ask();

@@ -1,5 +1,5 @@
 // 第5章 ベースとメロディ
-import { createChapter, $, $$, sleep } from './core/klesson.js';
+import { createChapter, $, $$, sleep, shuffle } from './core/klesson.js';
 import { synth } from './core/synth.js';
 import { loadKit, playPad } from './core/kitplayer.js';
 import { StepSeq, cells } from './core/stepseq.js';
@@ -105,7 +105,7 @@ $('#loopBtn').addEventListener('click', async (e) => {
     await kit();
     // スケールの音3つ＋ないもの1つ（ドから始めて、耳の基準を作る）
     qs = OUT.map((o) => {
-      const notes = [0, ...[3, 5, 7, 10, 12].sort(() => Math.random() - 0.5).slice(0, 3)];
+      const notes = [0, ...shuffle([3, 5, 7, 10, 12]).slice(0, 3)];
       const odd = 1 + Math.floor(Math.random() * 3);
       notes[odd] = o + (Math.random() < 0.5 ? 0 : 12);
       return { notes, odd };
