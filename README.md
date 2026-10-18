@@ -1,10 +1,10 @@
 # コアラ・ラボ
 
-iPad の Koala Sampler（無料の機能だけ）で、1曲のビートを完成させる初心者向け教材（全7章・約3時間）。ビルド不要の静的サイト。
+スマホ（Android）の Koala Sampler（無料の機能だけ）で、1曲のビートを完成させる初心者向け教材（全7章・約3時間）。ビルド不要の静的サイト。
 
 ## 手元で動かす
 
-`起動.bat` をダブルクリック（http://localhost:8766/ が開く）。iPad で使うには GitHub Pages などで https 公開する。
+`起動.bat` をダブルクリック（http://localhost:8766/ が開く）。スマホで使うには GitHub Pages などで https 公開する。
 
 ## 作り
 
@@ -14,7 +14,7 @@ iPad の Koala Sampler（無料の機能だけ）で、1曲のビートを完成
 
 ## 事実確認
 
-操作手順は公式マニュアル https://manual.koalasampler.com/tablet/ で確かめる。マニュアルに書かれていないボタン位置などは `.check-hw[data-label="要確認"]` で書き、推測で書かない。マニュアルの文章はそのまま写さず、自分の言葉で書く。
+操作手順は公式マニュアル https://manual.koalasampler.com/mobile/ で確かめる。マニュアルに書かれていないボタン位置などは `js/core/checks.js` の VERIFY に「分からないこと・なぜ・確かめ方・確かめると」を書いて、本文に `<div data-verify="id">` を置き、推測で書かない。マニュアルの文章はそのまま写さず、自分の言葉で書く。
 
 ## 記録を消さないための決まり
 

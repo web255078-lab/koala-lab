@@ -13,8 +13,20 @@
 <body class="koala">
 <main>
   <h1>要確認チェック</h1>
-  <p>教材の中で【要確認】にしている所を、<strong>iPad の Koala で実際に見て</strong>記録するページです。選ぶだけ・ひとこと書くだけでOK。記録はこのブラウザに保存されます。</p>
-  <p>全部（または分かった所だけ）できたら、いちばん下の「<strong>結果をコピー</strong>」を押して、教材づくりの相談に貼り付けてください。それをもとに本文を直します。</p>
+
+  <section class="card">
+    <h2>これは何？</h2>
+    <p>この教材の操作の説明は、Koala の<strong>公式マニュアル</strong>（開発元が書いた説明書）をもとにしています。でもマニュアルには、<strong>ボタンがスマホの画面のどこにあるか</strong>や、<strong>Android のスマホでどう動くか</strong>が書かれていない所があります。</p>
+    <p>そういう所を、この教材では<strong>【要確認】</strong>（＝まだ確かめられていないこと）と書いています。推測で「たぶんここ」と書くと、まちがっていたときに迷わせてしまうからです。</p>
+    <h3>あなたにしてほしいこと</h3>
+    <ol>
+      <li>Koala を使う<strong>スマホの Chrome</strong> でこのページを開く（端末名が自動で記録されます）</li>
+      <li>下の項目を1つずつ、Koala で実際に見て確かめる。「確かめ方」に手順があります</li>
+      <li>当てはまるボタンを選ぶ。気づいたことがあればメモに書く（分からない項目は飛ばしてOK）</li>
+      <li>いちばん下の「<strong>結果をコピー</strong>」を押して、教材づくりの相談（Claude）に貼り付ける</li>
+    </ol>
+    <p>貼ってもらった結果をもとに、教材の本文を「あなたのスマホで正しい手順」に書き直します。同じ項目は各章の本文の中にもあり、そこで記録しても、ここにまとまります。</p>
+  </section>
 
   <section class="card">
     <h2>あなたの環境</h2>
@@ -22,7 +34,7 @@
     <div class="form-row">
       <label>Koala のバージョン <input type="text" id="koalaVer" size="10" placeholder="例 2.0.15"></label>
     </div>
-    <p class="muted"><small>Koala のバージョンは、App Store の Koala Sampler のページの「バージョン履歴」で分かります。</small></p>
+    <p class="muted"><small>Google Play の Koala Sampler のページを下にスクロールした「このアプリについて」の中で分かります。分からなければ空のままでOK。</small></p>
   </section>
 
   <div id="items"></div>
@@ -35,7 +47,7 @@
       <button class="btn sub" id="clearBtn">記録を消す</button>
     </div>
     <p class="feedback" id="copyFb"></p>
-    <details><summary>コピーされる文章を見る</summary><pre class="preview" id="preview"></pre></details>
+    <details class="preview-box"><summary>コピーされる文章を見る</summary><pre class="preview" id="preview"></pre></details>
     <p><a href="index.html">目次にもどる</a></p>
   </section>
 </main>

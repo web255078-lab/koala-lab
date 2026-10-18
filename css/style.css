@@ -358,3 +358,15 @@ canvas.wave { width: 100%; height: 90px; border-radius: 10px; display: block; ma
 
 .check-item.done { outline: 2px solid var(--ok); }
 pre.preview { white-space: pre-wrap; font-size: 0.8rem; background: var(--surface-2); padding: 10px; border-radius: 8px; overflow-wrap: anywhere; }
+
+/* ---- 【要確認】の枠 ---- */
+.verify { border: 2px solid var(--warn-line); background: var(--warn-soft); border-radius: 12px; padding: 12px 14px; margin: 12px 0; }
+.verify.done { border-color: var(--ok); background: color-mix(in srgb, var(--ok-soft) 70%, var(--surface)); }
+.v-head { font-weight: 800; margin-bottom: 6px; }
+.v-done { margin-left: 8px; color: var(--ok); font-size: 0.85rem; }
+.v-row { margin: 6px 0; }
+.v-row > b { display: block; font-size: 0.82rem; color: var(--muted); }
+.v-row p, .v-row ol { margin: 2px 0 0; }
+.v-row ol { padding-left: 1.3em; }
+.verify details summary { cursor: pointer; font-weight: 700; margin: 4px 0; }
+.verify .memo textarea { background: var(--surface); }

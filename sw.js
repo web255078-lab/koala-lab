@@ -1,6 +1,6 @@
 // オフライン対応：最初に全部をしまっておく。つながっていれば最新を取りに行き、だめならしまったものを出す。
 // ファイルを増やしたら PRECACHE に足し、VERSION を上げる。
-const VERSION = 'koalalab-v4';
+const VERSION = 'koalalab-v5';
 const PRECACHE = [
   './', './index.html', './check.html', './js/check.js', './chapters/ch01.html', './chapters/ch02.html', './chapters/ch03.html',
   './chapters/ch04.html', './chapters/ch05.html', './chapters/ch06.html', './chapters/ch07.html',
@@ -8,7 +8,7 @@ const PRECACHE = [
   './js/index.js', './js/ch01.js', './js/ch02.js', './js/ch03.js', './js/ch04.js', './js/ch05.js', './js/ch06.js', './js/ch07.js',
   './js/core/chapters.js', './js/core/klesson.js', './js/core/store.js', './js/core/synth.js',
   './js/core/fx.js', './js/core/notes.js', './js/core/kit.js', './js/core/wav.js',
-  './js/core/kitplayer.js', './js/core/stepseq.js', './js/core/practice.js',
+  './js/core/kitplayer.js', './js/core/stepseq.js', './js/core/practice.js', './js/core/checks.js',
 ];
 
 // 1つ取れなくても残りはしまう（全部まとめて失敗しないように）

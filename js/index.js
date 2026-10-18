@@ -1,6 +1,9 @@
 import { mountShell } from './core/klesson.js';
 import { CHAPTERS } from './core/chapters.js';
 import { progress, exportAll, importMerge, lastExport, askPersist } from './core/store.js';
+import { mountVerifies } from './core/checks.js';
+
+mountVerifies();
 
 mountShell({ root: '.', title: '目次' });
 const $ = (id) => document.getElementById(id);
@@ -38,7 +41,7 @@ $('bkExport').addEventListener('click', () => {
   a.download = `koalalab-記録-${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}.json`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  $('bkFb').textContent = '書き出しました（「ファイル」アプリのダウンロードに入ります）';
+  $('bkFb').textContent = '書き出しました（スマホの Download フォルダに入ります）';
   $('bkFb').className = 'feedback ok';
   renderBackup();
 });

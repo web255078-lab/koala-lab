@@ -4,6 +4,7 @@
 import { synth } from './synth.js';
 import { progress, setTaskAliases, isSandbox, askPersist } from './store.js';
 import { TASK_ALIASES } from './chapters.js';
+import { mountVerifies } from './checks.js';
 
 setTaskAliases(TASK_ALIASES);
 export const $ = (s, r = document) => r.querySelector(s);
@@ -46,6 +47,7 @@ export function createChapter(o) {
   const CH = o.id;
   mountShell({ root: '..', title: o.title });
 
+  mountVerifies();
   const isDone = (id) => !!progress.chapter(CH).tasks[id];
 
   function renderProgress() {

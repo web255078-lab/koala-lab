@@ -16,6 +16,6 @@ export const CHAPTERS = [
 // 公式マニュアル（操作の確認先）
 export const MANUAL = {
   base: 'https://manual.koalasampler.com',
-  tablet: 'https://manual.koalasampler.com/tablet/',
+  mobile: 'https://manual.koalasampler.com/mobile/',
   learning: 'https://www.koalasampler.com/learning/',
 };
