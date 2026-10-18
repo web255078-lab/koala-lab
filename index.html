@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>コアラ・ラボ</title>
+<meta name="description" content="iPad の Koala Sampler で1曲のビートを完成させる、初心者向けの教材">
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="koala">
+<main>
+  <h1>コアラ・ラボ</h1>
+  <p>iPad の <strong>Koala Sampler</strong> で、音を集めて、並べて、<strong>1曲のビートを完成させる</strong>までの教材です。全7章・約3時間。無料の機能だけで進めます。</p>
+
+  <section class="card">
+    <h2>進め方</h2>
+    <ul>
+      <li>このページ（Safari）と Koala を<strong>行ったり来たり</strong>します。「やってみる」は Koala で、終わったらこのページで「やってみた」を押します</li>
+      <li>耳で当てるクイズや、Koala に読み込ませる素材の作成は、このページの中でできます</li>
+      <li>各章は「やってみる → 何が起きたか → それの名前」の順。用語はあとから出てきます</li>
+      <li>ヘッドホンかイヤホンがあると、音の違いが分かりやすいです</li>
+    </ul>
+    <div class="caution">操作の説明は Koala の公式マニュアル（<a href="https://manual.koalasampler.com/tablet/" target="_blank" rel="noopener">manual.koalasampler.com</a>）で確かめた内容です。アプリの更新で変わることがあります。マニュアルに書かれていないことは【要確認】と書いています。</div>
+  </section>
+
+  <section class="card">
+    <h2>進み具合</h2>
+    <div class="progress-bar"><i id="allbar" style="width:0%"></i></div>
+    <p class="muted" id="allText"></p>
+    <ul class="toc" id="toc"></ul>
+  </section>
+
+  <section class="card" id="backup">
+    <h2>記録のバックアップ</h2>
+    <p>進み具合はこのブラウザの中に保存されています。ときどきファイルに書き出しておくと、別の端末や別のアドレスに移るときに読み込んで戻せます。</p>
+    <p class="muted" id="bkStatus"></p>
+    <div class="btn-row">
+      <button class="btn" id="bkExport">ファイルに書き出す</button>
+      <label class="btn sub" for="bkFile" style="display:inline-block">ファイルから読み込む</label>
+      <input type="file" id="bkFile" accept="application/json,.json" hidden>
+    </div>
+    <p class="muted"><small>読み込みは「足し合わせ」です。いまの記録が消えることはありません。</small></p>
+    <p class="feedback" id="bkFb"></p>
+  </section>
+
+  <section class="card">
+    <h2>参考</h2>
+    <ul>
+      <li><a href="https://manual.koalasampler.com/tablet/" target="_blank" rel="noopener">公式マニュアル（タブレット版・英語）</a></li>
+      <li><a href="https://www.koalasampler.com/learning/" target="_blank" rel="noopener">公式の学習ページ（動画チュートリアルの一覧）</a></li>
+    </ul>
+    <p class="muted"><small>この教材は Koala Sampler の開発元（elf audio）とは関係のない、個人用の教材です。</small></p>
+  </section>
+</main>
+<script type="module" src="js/index.js"></script>
+</body>
+</html>
