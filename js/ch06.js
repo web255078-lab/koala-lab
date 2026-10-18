@@ -95,12 +95,12 @@ $('#arrPlay').addEventListener('click', async (e) => {
 $('#planSave').addEventListener('click', () => {
   const fb = $('[data-task="plan"] .feedback');
   const miss = [];
-  if (plan.length < 5) miss.push(`あと ${5 - plan.length} ブロック`);
+  if (plan.length < 6) miss.push(`あと ${6 - plan.length} ブロック`);
   if (!plan.includes('brk')) miss.push('ブレイクを入れる');
   if (!plan.includes('sabi')) miss.push('サビを入れる');
   if (miss.length) { fb.textContent = `あと少し：${miss.join('／')}`; fb.className = 'feedback ng'; return; }
   write('plan', plan);
-  fb.textContent = `決定！ ${plan.map((k) => BLOCKS[k].name).join(' → ')}（約${Math.round(plan.length * 2 * BAR)}秒）`;
+  fb.textContent = `決定！ ${plan.map((k) => BLOCKS[k].name).join(' → ')}（Koala で4小節ずつ並べると約${Math.round(plan.length * 16 * (60 / 90))}秒）`;
   fb.className = 'feedback ok';
   ch.clear('plan');
 });

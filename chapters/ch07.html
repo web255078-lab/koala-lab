@@ -31,9 +31,10 @@
       <ol>
         <li><strong>MENU</strong> → <strong>RECORD SONG</strong> を選ぶ（録音の待ち状態になる）。AUTO-PLAY（第6章）を入れておくと、手で切り替えなくても最後まで流れます</li>
         <li>PERFORM の画面で再生を押すと、録音が始まる</li>
-        <li>構成表の順にシーケンスを切り替え、エフェクトもかけながら最後まで演奏</li>
-        <li>停止すると録音が止まるので、名前をつけて保存する</li>
+        <li><strong>AUTO-PLAY を入れている場合</strong>：シーケンスは並んだ順に自動で進むので、見守りながら、好きなところでエフェクトだけかける。<strong>手で切り替える場合</strong>：構成表の順にシーケンスをたたいて切り替える（SEQ SNAP が 1 BAR なら、次の小節の頭で切り替わる）</li>
+        <li>最後のシーケンスが終わったら停止する。停止すると録音も止まるので、名前をつけて保存する</li>
       </ol>
+      <div data-verify="autoplayend"></div>
       <div class="caution">最後の音の響きまで録りたいときは、終わりに空のシーケンス（何も入っていない枠）へ切り替えてから止めると、余韻が切れません（公式マニュアルのコツ）。</div>
       <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
       <p class="feedback" data-fb></p>
@@ -59,7 +60,7 @@
     </div>
     <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
     <div class="step what"><span class="tag">何が起きたか</span>
-      <p>1小節ぶんのループが、全部の音を混ぜた1つのファイルになりました。演奏しなくても、きっちり同じ長さのループが手に入ります。</p>
+      <p>選んだシーケンス（4小節）が、全部の音を混ぜた1つのファイルになりました。演奏しなくても、きっちり同じ長さのループが手に入ります。</p>
     </div>
     <div class="step name"><span class="tag">それの名前</span>
       <p>アプリの外に向けてファイルを作るのが<span class="term">エクスポート</span>（書き出し）。全部の音を混ぜた1つのファイルにするのが MIXED、パッドごとに別のファイルにするのが<span class="term">ステム</span>です。自分で作ったループを、また材料としてサンプリングし直すのを<span class="term">リサンプリング</span>といいます。</p>

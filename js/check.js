@@ -36,7 +36,9 @@ $('#copyBtn').addEventListener('click', async () => {
 });
 $('#clearBtn').addEventListener('click', () => {
   if (!confirm('要確認チェックの記録を消しますか？（控えは残ります）')) return;
+  const ver = loadChecks()._ver;
   clearWithTrash('checks');
+  if (ver) setVersion(ver);
   location.reload();
 });
 refresh();

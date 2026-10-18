@@ -99,6 +99,14 @@ export const VERIFY = [
     affects: '第7章の「保存先」と「再生できたか」の手順を正しく書き直します。',
   },
   {
+    id: 'autoplayend', ch: '第7章 7-1', title: 'AUTO-PLAY で、最後のシーケンスのあとどうなるか',
+    unknown: 'AUTO-PLAY を入れて流したとき、最後の枠のシーケンスが終わると、最初に戻るのか、止まるのか、空の枠へ進むのか。',
+    why: '公式マニュアルには「シーケンスが終わると次の枠へ進む」とだけあり、最後の枠のあとのことは書かれていません。録音をどこで止めるか、余韻をどう残すかに関わります。',
+    steps: ['短いシーケンスを2つだけ枠に並べる（ほかの枠は空にする）', 'SEQ SNAP のメニューで AUTO-PLAY にチェックを入れて再生する', '2つ目が終わったあと、どうなるか見る・聞く'],
+    options: ['最初の枠に戻ってくり返す', '止まる', '空の枠に進んで無音になる', 'その他（メモに）'],
+    affects: '第7章の「録音の終え方」を、あなたの Koala での動きに合わせて書き直します。',
+  },
+  {
     id: 'split', ch: '進め方', title: 'この教材（Chrome）と Koala を、画面に並べられるか',
     unknown: 'Android の画面分割で、上下（左右）に並べて使えるか。',
     why: 'アプリによっては画面分割に対応していません。並べられると、行ったり来たりしなくて済みます。',
@@ -154,6 +162,7 @@ export function renderVerify(el, item, { compact = false } = {}) {
     window.dispatchEvent(new CustomEvent('koala:checks'));
   });
   sync();
+  window.addEventListener('koala:checks', sync);
 }
 
 // 本文の中の <div data-verify="id"></div> を全部、枠にする
