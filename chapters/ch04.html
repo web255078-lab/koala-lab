@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>第4章 ビートを打ち込む | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="koala">
+<main>
+  <header class="chapter-head">
+    <div class="meta">第4章 ・ 約35分 ・ iPad の Koala Sampler（無料の機能だけ）</div>
+    <h1>ビートを打ち込む</h1>
+    <div class="progress-bar" aria-label="この章の進み具合"><i id="chbar" style="width:0%"></i></div>
+  </header>
+
+  <section class="card">
+    <p>いよいよ、整えた音を<strong>並べてビート</strong>にします。やり方は2つ。指で叩いて録る方法と、マス目に置いていく方法です。どちらも Koala の SEQUENCE の画面でやります。</p>
+    <p class="muted"><small>このページの練習用パッドは、第2章の素材キット（キック・スネア・ハイハット）の音です。</small></p>
+  </section>
+
+  <!-- 4-1 -->
+  <section class="card lesson" id="l1" data-try="try1">
+    <div class="num">4-1</div>
+    <h2>速さと長さを決める</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>Koala で：</strong>SEQUENCE の画面を開き、再生ボタンの近くのテンポの数字を<strong>2回たたいて</strong>メニューを開きます。</p>
+      <ol>
+        <li>テンポを <strong>90</strong> にする（数字をたたいて入力するか、＋・−で）</li>
+        <li><strong>メトロノーム</strong>（カチカチ）を ON にする</li>
+        <li>空いているシーケンスの枠を1つ選び、<strong>BARS</strong> で長さを <strong>1</strong> にする</li>
+        <li>再生ボタンを押して、カチカチを聞いてみる</li>
+      </ol>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>カチ・カチ・カチ・カチと、4回で1周するカチカチが鳴りました。数字を大きくすると速く、小さくすると遅くなります。4回ぶんの1周が、これから音を置いていく「1枚の紙」です。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>速さは <span class="term">BPM</span>（1分間にカチが何回か）。90 なら、ゆったりしたヒップホップくらいの速さです。カチ4回ぶんのまとまりを<span class="term">小節</span>、Koala の BARS は「何小節か」という意味です。</p>
+    </div>
+  </section>
+
+  <!-- 4-2 -->
+  <section class="card lesson" id="l2" data-try="try2">
+    <div class="num">4-2</div>
+    <h2>叩いて録る</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで練習：</strong>カチ4回の準備のあと、2小節ぶん叩きます。<strong>キックを1拍目と3拍目、スネアを2拍目と4拍目</strong>。「ドン・タン・ドン・タン」です。</p>
+      <div id="padsA"></div>
+      <div class="btn-row"><button class="btn" id="practiceBtn">練習スタート</button><button class="btn sub" id="calibBtn" hidden>このずれを補正に使う</button></div>
+      <p class="feedback" id="practiceFb"></p>
+      <div id="practiceGrid"></div>
+      <p><strong>Koala で：</strong>4-1 の枠を選んだまま <strong>録音ボタン</strong>を押し、パッドで「ドン・タン・ドン・タン」。もう一度録音ボタンを押すと、録音から再生に戻ります。うまくいったら、もう一度録音して、今度は<strong>ハイハットだけ</strong>を「チッ・チッ・チッ・チッ」と重ねてみてください。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>叩いたとおりに録音されて、くり返し再生されました。2回目の録音では、1回目の「ドン・タン」が消えずに、上にハイハットが<strong>重なり</strong>ました。</p>
+      <p>少しずれて叩いても、録った音はマス目にピタッとそろっていたはずです。上の練習の結果にも「そろえると」の表が出ます。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>演奏しながら録るのは<span class="term">リアルタイム録音</span>、前の録音に重ねて録るのは<span class="term">オーバーダブ</span>。叩いたタイミングを近いマス目（Koala ではふつう16分音符）にそろえる機能を<span class="term">クオンタイズ</span>といいます。テンポのメニューで ON／OFF できます。</p>
+    </div>
+
+    <div class="task" data-task="drum">
+      <h3>課題 4-2　ドン・タン 70点</h3>
+      <p>上の練習で、平均70点以上でクリア。</p>
+      <div><span class="status">未挑戦</span></div>
+    </div>
+  </section>
+
+  <!-- 4-3 -->
+  <section class="card lesson" id="l3" data-try="try3">
+    <div class="num">4-3</div>
+    <h2>マス目で組む</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>下のマス目をタップすると、音が置かれます。▶で流しながら、置いたり消したりしてください。1行が1つの音、横の16マスで1小節です。</p>
+      <div class="btn-row">
+        <button class="btn sub" id="seqPlay">▶ 流す</button>
+        <button class="btn sub" id="seqClear">全部消す</button>
+      </div>
+      <div id="designer"></div>
+      <p><strong>Koala で：</strong>録ったシーケンスを<strong>2回たたく</strong>と、マス目の画面が開きます。空いているところをたたくと音が置かれ、置いた音をたたくと消えます。<strong>VEL</strong> を選んで音の上を上下になぞると、その音の強さが変わります。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>叩けなくても、マス目に置くだけでビートが作れました。4マスで1拍。太い線のところが1拍目・2拍目…の頭です。叩いて録った音も、同じマス目の上に並んでいます。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>1マスずつ音を置いていくやり方を<span class="term">ステップ入力</span>、マス目の画面を<span class="term">グリッド</span>、音の強さを<span class="term">ベロシティ</span>といいます。Koala の DICE は、音ごとに「鳴る確率」を決める機能。毎回少しちがうビートになります。</p>
+    </div>
+
+    <div class="task" data-task="grid">
+      <h3>課題 4-3　設計図どおりに組もう</h3>
+      <p>お題のリズムを、上のマス目で組んで「判定」。3つ全部でクリア。できたら、同じものを Koala のグリッドにも置いてみてください。</p>
+      <p class="quiz-q quiz-q-sm" data-q></p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <p class="feedback"></p>
+      <div class="btn-row">
+        <button class="btn" data-start>はじめる</button>
+        <button class="btn sub" data-listen disabled>お手本を聞く</button>
+        <button class="btn sub" data-judge disabled>判定</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-4 -->
+  <section class="card lesson" id="l4" data-try="try4">
+    <div class="num">4-4</div>
+    <h2>ノリをつける</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>4-3 のマス目で、ハイハットを16マス全部に置いてから流し、下のつまみを右へ動かしてください。</p>
+      <div class="form-row"><label>はね具合 <input type="range" id="swing" min="0" max="100" value="0"></label><b id="swingVal">0</b></div>
+      <p><strong>Koala で：</strong>テンポのメニュー（数字を2回たたく）の中の <strong>SWING</strong> のバーを、指でなぞって少し増やします。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>まっすぐだった「チチチチ」が、「チッチ・チッチ」とはねるような、ゆれるリズムに変わりました。表の拍はそのままで、裏の音だけが少し遅れています。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>裏の音を遅らせて、はねるノリを出すことを<span class="term">スウィング</span>といいます。ヒップホップやハウスでは、少しだけ（つまみの2〜3割くらい）かけることが多いです。かけすぎるとスキップのように聞こえます。</p>
+    </div>
+
+    <div class="task" data-task="swing">
+      <h3>耳で当てる：はねてる？</h3>
+      <p>ビートが流れます。スウィングがかかっているか、まっすぐか。6問中5問でクリア。</p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <div class="btn-row">
+        <button class="chip" data-a="swing" disabled>はねてる</button>
+        <button class="chip" data-a="straight" disabled>まっすぐ</button>
+      </div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" data-start>はじめる</button></div>
+    </div>
+  </section>
+
+  <!-- 課題 -->
+  <section class="card" id="tasks">
+    <div class="num final-num">章末課題</div>
+    <h2>1小節のビートを Koala に</h2>
+    <div class="task" data-task="check">
+      <ul class="checks">
+        <li><label><input type="checkbox" data-item="seq"> シーケンスの枠1つに、キック・スネア・ハイハットの1小節ビートができた</label></li>
+        <li><label><input type="checkbox" data-item="grid"> グリッドを開いて、音を1つ以上置いたり消したりして直した</label></li>
+        <li><label><input type="checkbox" data-item="vel"> ハイハットのどれかの強さ（VEL）を変えた</label></li>
+        <li><label><input type="checkbox" data-item="swing"> スウィングを少しかけて、好みのノリにした</label></li>
+      </ul>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+    </div>
+  </section>
+
+  <section class="card" id="cando">
+    <h2>できるようになったこと</h2>
+    <ul class="toc" id="candoList"></ul>
+    <div class="btn-row"><button class="btn sub" id="resetCh">この章の記録を消す</button></div>
+  </section>
+
+  <section class="card">
+    <p>次は <a href="ch05.html"><strong>第5章 ベースとメロディ</strong></a>。1つの音から鍵盤を作って、音程のあるパートを足します。</p>
+    <p class="muted"><small>参考：<a href="https://manual.koalasampler.com/tablet/5-sequence/" target="_blank" rel="noopener">公式マニュアル「Sequence」（5.3 Tempo Menu・5.7 Sequence Grid・5.8 Grid Controls）</a>（英語）</small></p>
+    <p><a href="../index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="../js/ch04.js"></script>
+</body>
+</html>

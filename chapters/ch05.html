@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>第5章 ベースとメロディ | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="koala">
+<main>
+  <header class="chapter-head">
+    <div class="meta">第5章 ・ 約25分 ・ iPad の Koala Sampler（無料の機能だけ）</div>
+    <h1>ベースとメロディ</h1>
+    <div class="progress-bar" aria-label="この章の進み具合"><i id="chbar" style="width:0%"></i></div>
+  </header>
+
+  <section class="card">
+    <p>ドラムだけだと、リズムはあっても「曲」には聞こえません。この章では、<strong>1つの音を鍵盤のように弾いて</strong>、ベースとちょっとしたメロディを足します。</p>
+    <p class="muted"><small>使う音は第2章の素材キットの「ベース（ド）」と「ポン（ド）」。まだ Koala に入れていなければ、第2章の 2-3 で保存して、バンク A の5番・6番あたりに入れてください。</small></p>
+  </section>
+
+  <!-- 5-1 -->
+  <section class="card lesson" id="l1" data-try="try1">
+    <div class="num">5-1</div>
+    <h2>1つの音から鍵盤を作る</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>下の鍵盤は、全部「ベース（ド）」1つの音から作っています。左から順に弾いてみてください。</p>
+      <div class="note-keys" id="chromKeys"></div>
+      <p><strong>Koala で：</strong>SAMPLE でベースのパッドを選んでから SEQUENCE へ。<strong>KEYBOARD</strong> のメニューを開いて「Keyboard」（ピアノの鍵盤の形）を選び、弾いてみてください。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>パッド1つに入れた1つの音が、高さの違う鍵盤として並びました。右へ行くほど高くなり、ドラムのパッドと同じように叩けます。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>1つのパッドの音を、高さを変えて鍵盤のように弾くのが Koala の<span class="term">キーボードモード</span>です。高さの違いを<span class="term">音程</span>、となりの鍵盤との差を<span class="term">半音</span>といいます。</p>
+    </div>
+  </section>
+
+  <!-- 5-2 -->
+  <section class="card lesson" id="l2" data-try="try2">
+    <div class="num">5-2</div>
+    <h2>外れない音だけ並べる</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>▶でドラムを流しながら、下の10個のパッドを<strong>でたらめに</strong>叩いてください。どこを叩いても、変な音になりません。</p>
+      <div class="btn-row"><button class="btn sub" id="loopBtn">▶ ドラムを流す</button>
+        <button class="chip sel" data-snd="bass">ベース</button><button class="chip" data-snd="pluck">ポン</button></div>
+      <div class="note-grid" id="pentaGrid"></div>
+      <p><strong>Koala で：</strong>KEYBOARD のメニューで「Grid」を選び、スケールの一覧から <strong>Pentatonic</strong> を選びます。並んだパッドを、でたらめに叩いてみてください。</p>
+      <div class="check-hw" data-label="要確認">Koala でスケールの基準の音（ルート）をどう決めるかは、公式マニュアルに書かれていません。画面に音名が出ていれば確認してください。</div>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>5-1 の鍵盤だと、でたらめに弾くと「あれ？」という音がまざります。でも 5-2 のパッドは、<strong>ぶつかりにくい音だけ</strong>が並んでいるので、どう叩いてもそれらしく聞こえました。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>曲で使う音を選んで並べたものを<span class="term">スケール</span>といいます。今回の5つの音（1オクターブに5つ）のスケールは<span class="term">ペンタトニック</span>。世界中の民謡やロック、ヒップホップでよく使われる、失敗しにくいスケールです。</p>
+      <p>Koala の Grid にはほかにも Major（明るい）、Natural Minor（暗め）、Japanese（和風）などがあります。</p>
+    </div>
+
+    <div class="task" data-task="odd">
+      <h3>耳で当てる：仲間はずれはどれ？</h3>
+      <p>4つの音が順に鳴ります。1つだけ、スケールに<strong>ない音</strong>がまざっています。何番目？ 5問中4問でクリア。</p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <div class="btn-row">
+        <button class="chip" data-a="0" disabled>1番目</button><button class="chip" data-a="1" disabled>2番目</button>
+        <button class="chip" data-a="2" disabled>3番目</button><button class="chip" data-a="3" disabled>4番目</button>
+      </div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" data-start>はじめる</button><button class="btn sub" data-replay disabled>もう一度聞く</button></div>
+    </div>
+  </section>
+
+  <!-- 5-3 -->
+  <section class="card lesson" id="l3" data-try="try3">
+    <div class="num">5-3</div>
+    <h2>ベースラインを録る</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>Koala で：</strong>第4章でビートを作ったシーケンスを選んで録音ボタンを押し、Grid のパッドで<strong>ベース</strong>を弾いて重ねます。最初は「いちばん低い音を、キックと同じタイミングで」がおすすめです。</p>
+      <div class="caution">キーボードモードで録った音を、あとからピアノロールで直すのは有料の Samurai の機能です（公式マニュアルより）。無料のままなら、失敗したら UNDO で戻すか、<strong>CLEAR を押したまま KEYBOARD をたたく</strong>と、そのパッドの音だけ消えます。</div>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>ドラムの下に低い音が入って、急に「曲らしく」なりました。ベースがキックと同じタイミングで鳴ると、低音どうしが手をつないで、どっしりします。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>低い音で弾くフレーズを<span class="term">ベースライン</span>といいます。スケールのいちばん基準になる音（ここではド）を<span class="term">ルート</span>と呼び、ベースはルートを中心に弾くと安定します。</p>
+    </div>
+
+    <div class="task" data-task="copy">
+      <h3>課題 5-3　ベースラインをまねする</h3>
+      <p>4つの音のベースラインが鳴ります。5-2 のパッドで、<strong>同じ順番</strong>に弾いてください（リズムは気にしなくてOK）。3つ全部でクリア。</p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <p class="quiz-q quiz-q-sm" data-progress></p>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" data-start>はじめる</button><button class="btn sub" data-replay disabled>もう一度聞く</button></div>
+    </div>
+  </section>
+
+  <!-- 5-4 -->
+  <section class="card lesson" id="l4" data-try="try4">
+    <div class="num">5-4</div>
+    <h2>上にメロディを少し</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>Koala で：</strong>今度は「ポン」のパッドを選んで、同じように Grid のペンタトニックで、<strong>短いフレーズを1つ</strong>重ねて録ります。コツは2つ。</p>
+      <ul>
+        <li>音を詰めこまず、<strong>すき間</strong>をあける（1小節に3〜4音で十分）</li>
+        <li>ベースより<strong>高い</strong>ところで弾く</li>
+      </ul>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>低いベースと高いメロディで、音の居場所が上下に分かれました。すき間があると、ドラムとベースが聞こえたまま、メロディが「歌って」いるように聞こえます。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>ドラムやベースの上に乗る高いパートを<span class="term">上もの</span>、短くくり返すフレーズを<span class="term">リフ</span>といいます。</p>
+    </div>
+  </section>
+
+  <!-- 課題 -->
+  <section class="card" id="tasks">
+    <div class="num final-num">章末課題</div>
+    <h2>ビートに音程を</h2>
+    <div class="task" data-task="check">
+      <ul class="checks">
+        <li><label><input type="checkbox" data-item="kbd"> キーボードモード（Keyboard か Grid）で、ベースを弾けた</label></li>
+        <li><label><input type="checkbox" data-item="bass"> ビートのシーケンスに、ベースラインを重ねて録った</label></li>
+        <li><label><input type="checkbox" data-item="melody"> 「ポン」か別の音で、短いメロディを重ねた</label></li>
+        <li><label><input type="checkbox" data-item="save"> 保存した（別の名前で残すなら SAVE AS）</label></li>
+      </ul>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+    </div>
+  </section>
+
+  <section class="card" id="cando">
+    <h2>できるようになったこと</h2>
+    <ul class="toc" id="candoList"></ul>
+    <div class="btn-row"><button class="btn sub" id="resetCh">この章の記録を消す</button></div>
+  </section>
+
+  <section class="card">
+    <p>次は <a href="ch06.html"><strong>第6章 展開とエフェクト</strong></a>。1小節のループを、始まりと終わりのある曲にします。</p>
+    <p class="muted"><small>参考：<a href="https://manual.koalasampler.com/tablet/5-sequence/" target="_blank" rel="noopener">公式マニュアル「Sequence」（5.5 Sequence Controls・5.6 Keyboard Modes）</a>（英語）</small></p>
+    <p><a href="../index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="../js/ch05.js"></script>
+</body>
+</html>

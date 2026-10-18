@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>第7章 書き出して完成 | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="koala">
+<main>
+  <header class="chapter-head">
+    <div class="meta">第7章 ・ 約15分 ・ iPad の Koala Sampler（無料の機能だけ）</div>
+    <h1>書き出して完成</h1>
+    <div class="progress-bar" aria-label="この章の進み具合"><i id="chbar" style="width:0%"></i></div>
+  </header>
+
+  <section class="card">
+    <p>最後の章です。第6章で通して演奏できるようになった曲を、<strong>1つの音楽ファイル</strong>にします。ファイルになれば、家族に聞かせたり、ほかのアプリで使ったりできます。</p>
+    <div id="planBox"></div>
+  </section>
+
+  <!-- 7-1 -->
+  <section class="card lesson" id="l1" data-try="try1">
+    <div class="num">7-1</div>
+    <h2>演奏を録音する</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <ol>
+        <li><strong>MENU</strong> → <strong>RECORD SONG</strong> を選ぶ（録音の待ち状態になる）</li>
+        <li>PERFORM の画面で再生を押すと、録音が始まる</li>
+        <li>構成表の順にシーケンスを切り替え、エフェクトもかけながら最後まで演奏</li>
+        <li>停止すると録音が止まるので、名前をつけて保存する</li>
+      </ol>
+      <div class="caution">最後の音の響きまで録りたいときは、終わりに空のシーケンス（何も入っていない枠）へ切り替えてから止めると、余韻が切れません（公式マニュアルのコツ）。</div>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>演奏したとおりに、切り替えもエフェクトも含めて、まるごと1つの音になりました。何度でもやり直せるので、気に入る演奏が録れるまで挑戦してOKです。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>演奏をまるごと録ることを<span class="term">レコーディング</span>、録った完成品を<span class="term">トラック</span>や<span class="term">音源</span>と呼びます。Koala の RECORD SONG は WAV ファイルとして保存されます。</p>
+    </div>
+  </section>
+
+  <!-- 7-2 -->
+  <section class="card lesson" id="l2" data-try="try2">
+    <div class="num">7-2</div>
+    <h2>ループを書き出す</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p>お気に入りのシーケンスを選んで、<strong>MENU</strong> → <strong>EXPORT</strong> → いまのシーケンスを、種類 <strong>MIXED</strong>・形式 <strong>WAV</strong> で書き出します。保存先は「ファイル」アプリの好きな場所へ。</p>
+      <p class="muted"><small>もう1つの遊び：<strong>MENU → RESAMPLE LOOP</strong> を選ぶと、いまのシーケンスが1つの音になって、空いているパッドに入ります。ループを1つの音として、さらに切ったり逆再生したりできます。</small></p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>1小節ぶんのループが、全部の音を混ぜた1つのファイルになりました。演奏しなくても、きっちり同じ長さのループが手に入ります。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>アプリの外に向けてファイルを作るのが<span class="term">エクスポート</span>（書き出し）。全部の音を混ぜた1つのファイルにするのが MIXED、パッドごとに別のファイルにするのが<span class="term">ステム</span>です。自分で作ったループを、また材料としてサンプリングし直すのを<span class="term">リサンプリング</span>といいます。</p>
+    </div>
+  </section>
+
+  <!-- 7-3 -->
+  <section class="card lesson" id="l3" data-try="try3">
+    <div class="num">7-3</div>
+    <h2>曲まるごとを残す</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>MENU</strong> → <strong>EXPORT</strong> の中の <strong>Share Koala Song</strong> で、作業中の曲まるごと（パッドの音もシーケンスも全部）を1つのファイルにして、「ファイル」アプリに保存してください。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>名前の最後が「.koala」のファイルができました。これがあれば、iPad を買い替えても、ほかの端末の Koala でも、続きから作業できます（MENU → LOAD の IMPORT SONG で読み込み）。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>作業の途中を丸ごと保存したファイルを<span class="term">プロジェクトファイル</span>といいます。完成した WAV（聞く用）と、.koala（直す用）の2つを残しておくのが安心です。</p>
+    </div>
+  </section>
+
+  <!-- 卒業 -->
+  <section class="card" id="tasks">
+    <div class="num final-num">卒業課題</div>
+    <h2>1曲できた</h2>
+    <div class="task" data-task="final">
+      <ul class="checks">
+        <li><label><input type="checkbox" data-item="len"> 1分以上の曲を RECORD SONG で録音した</label></li>
+        <li><label><input type="checkbox" data-item="parts"> ドラム・ベース・自分で録った音が入っている</label></li>
+        <li><label><input type="checkbox" data-item="form"> ブレイクとサビがあって、始まりと終わりがある</label></li>
+        <li><label><input type="checkbox" data-item="play"> 書き出した WAV を「ファイル」アプリで再生できた</label></li>
+        <li><label><input type="checkbox" data-item="backup"> .koala ファイルでバックアップした</label></li>
+        <li><label><input type="checkbox" data-item="share"> 誰かに聞いてもらった</label></li>
+      </ul>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+    </div>
+
+    <div class="task" data-task="review">
+      <h3>ふり返りシート</h3>
+      <p>自分の曲を、もう一度通して聞いてから。正解はありません。次の1曲のための記録です。</p>
+      <div class="review" id="review"></div>
+      <label class="memo">次の曲でやってみたいこと<textarea id="reviewMemo" rows="3" placeholder="例：もっとゆっくりの曲、家族の声だけで作る など"></textarea></label>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" id="reviewSave">記録する</button></div>
+    </div>
+  </section>
+
+  <section class="card" id="cando">
+    <h2>できるようになったこと</h2>
+    <ul class="toc" id="candoList"></ul>
+    <div class="btn-row"><button class="btn sub" id="resetCh">この章の記録を消す</button></div>
+  </section>
+
+  <section class="card">
+    <h2>このあと</h2>
+    <ul>
+      <li><strong>もう1曲</strong>：MENU → NEW で新しい曲を。2曲めは、たぶん半分の時間でできます</li>
+      <li><strong>有料の機能</strong>：高さを変えても長さが変わらない STRETCH、ドラムの自動切り分け（AUTO-CHOP）、ピアノロールなどは「Samurai」、トラックごとのエフェクトは「Mixer」で使えるようになります（App Store の説明より）</li>
+      <li><strong>FM-1 と組み合わせる</strong>：FM-1 の音を録って Koala の材料にする、など。iPad への音のつなぎ方は【要確認】です</li>
+    </ul>
+    <p class="muted"><small>参考：<a href="https://manual.koalasampler.com/tablet/7-main-menu/" target="_blank" rel="noopener">公式マニュアル「Main Menu」（7.4 Record Song・7.5 Resample Loop・7.6 Export）</a>・<a href="https://manual.koalasampler.com/tablet/6-perform/" target="_blank" rel="noopener">「Perform」（6.2 Record a Song）</a>（英語）</small></p>
+    <p><a href="../index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="../js/ch07.js"></script>
+</body>
+</html>

@@ -35,6 +35,7 @@ export function mountShell({ root = '.', title = '' } = {}) {
   btn.addEventListener('click', unlock);
   window.addEventListener('pointerdown', unlock, { once: true, capture: true });
   askPersist();
+  mountOfflineStatus(bar);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register(`${root}/sw.js`).catch(() => {});
 }
 
@@ -167,4 +168,25 @@ export function createChapter(o) {
   });
 
   return { CH, open, clear, isDone, checklist, quiz, renderProgress };
+}
+
+// オフラインで使える準備ができているかを、上部バーに出す
+export function mountOfflineStatus(bar) {
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  const pill = document.createElement('span');
+  pill.className = 'pill offline';
+  pill.textContent = '⏳ オフライン準備中';
+  bar.querySelector('.spacer').after(pill);
+  const ask = () => navigator.serviceWorker.controller?.postMessage('offline-status');
+  navigator.serviceWorker.addEventListener('message', (e) => {
+    if (e.data?.type !== 'offline-status') return;
+    const ok = e.data.have >= e.data.total;
+    pill.textContent = ok ? '📴 オフラインOK' : `⏳ オフライン準備中 ${e.data.have}/${e.data.total}`;
+    pill.classList.toggle('on', ok);
+    pill.title = ok ? 'ネットがなくても開けます' : 'ネットにつながったまま、少し待ってください';
+    if (!ok) setTimeout(ask, 2000);
+  });
+  navigator.serviceWorker.ready.then(() => setTimeout(ask, 500));
+  navigator.serviceWorker.addEventListener('controllerchange', () => setTimeout(ask, 500));
+  if (!navigator.serviceWorker.controller) pill.textContent = '⏳ オフライン準備中（一度読み込み直すと完了）';
 }

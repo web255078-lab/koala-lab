@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>第6章 展開とエフェクト | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="koala">
+<main>
+  <header class="chapter-head">
+    <div class="meta">第6章 ・ 約25分 ・ iPad の Koala Sampler（無料の機能だけ）</div>
+    <h1>展開とエフェクト</h1>
+    <div class="progress-bar" aria-label="この章の進み具合"><i id="chbar" style="width:0%"></i></div>
+  </header>
+
+  <section class="card">
+    <p>ここまでで、気持ちいい1小節のループができました。でも、同じループが3分続くと、さすがに飽きます。この章では、ループを<strong>いくつかに増やして並べ</strong>、<strong>指でエフェクト</strong>をかけて、始まりと終わりのある曲にします。</p>
+  </section>
+
+  <!-- 6-1 -->
+  <section class="card lesson" id="l1" data-try="try1">
+    <div class="num">6-1</div>
+    <h2>ループを増やす</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>Koala で：</strong>SEQUENCE の画面で、第5章までに作ったシーケンスを<strong>指で空いている枠に引っぱります</strong>。同じものがコピーされます。</p>
+      <ol>
+        <li>1つ目のコピーを開いて（2回たたいてグリッド）、<strong>キックとベースを消す</strong> → 「ブレイク」</li>
+        <li>もう1つコピーして、<strong>ハイハットやメロディを足す</strong> → 「サビ」</li>
+      </ol>
+      <p class="muted"><small>枠を長押しすると色をつけられます。役割ごとに色を変えておくと、あとで迷いません。シーケンスをシーケンスの上に重ねて落とすと、Mix（重ねる）・Add to End（うしろにつなぐ）などを選べます。</small></p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>同じ材料から、雰囲気のちがうループが3つできました。キックが抜けると急に静かに、ハイハットが増えるとにぎやかに。<strong>音を抜く</strong>のも、立派な作曲です。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>元のループから作った別バージョンを<span class="term">バリエーション</span>、音を減らして一息つく部分を<span class="term">ブレイク</span>、いちばん盛り上がる部分を<span class="term">サビ</span>（英語ではドロップやフックとも）と呼びます。</p>
+    </div>
+  </section>
+
+  <!-- 6-2 -->
+  <section class="card lesson" id="l2" data-try="try2">
+    <div class="num">6-2</div>
+    <h2>並べて曲の形に</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>下のブロックをタップして、曲の順番を組んでください。▶で、組んだ順に流れます（1ブロック＝1小節×2回）。</p>
+      <div class="btn-row" id="blockPalette"></div>
+      <div class="arr-line" id="arrLine"></div>
+      <div class="btn-row">
+        <button class="btn sub" id="arrPlay">▶ 通して聞く</button>
+        <button class="btn sub" id="arrUndo">1つ戻す</button>
+        <button class="btn sub" id="arrClear">全部消す</button>
+      </div>
+      <p><strong>Koala で：</strong>PERFORM の画面で再生し、演奏しながら<strong>シーケンスをたたいて切り替え</strong>ます。テンポのメニューの <strong>SEQUENCE SNAP</strong> を「小節」にしておくと、たたいたあと次の小節の頭で切り替わるので、ずれません。<strong>AUTO-PLAY</strong> を入れると、並んだ順に自動で次へ進みます。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>同じ3つのループでも、並べ方で物語が変わりました。ブレイクで静かになったあとにサビが来ると、ただサビを続けるより、ずっと盛り上がって聞こえます。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>曲の順番を<span class="term">構成</span>、場面が移り変わることを<span class="term">展開</span>、構成や音の組み合わせを考えることを<span class="term">アレンジ</span>といいます。よくある形は「イントロ → A → サビ → ブレイク → サビ → アウトロ」です。</p>
+    </div>
+
+    <div class="task" data-task="plan">
+      <h3>課題 6-2　構成表を作る</h3>
+      <p>上で、<strong>5ブロック以上</strong>、<strong>ブレイクとサビの両方</strong>が入った構成を組んで「これで決定」。決めた構成表は第7章でも使います。</p>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" id="planSave">これで決定</button></div>
+    </div>
+  </section>
+
+  <!-- 6-3 -->
+  <section class="card lesson" id="l3" data-try="try3">
+    <div class="num">6-3</div>
+    <h2>指でエフェクト</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>▶でループを流して、下のボタンを<strong>押している間だけ</strong>エフェクトがかかります。FILTER は押したまま<strong>上下に指を動かす</strong>と変わります。</p>
+      <div class="btn-row"><button class="btn sub" id="fxLoop">▶ ループを流す</button><button class="chip" id="fxHold">HOLD：OFF</button></div>
+      <div class="fx-pads" id="fxPads">
+        <button class="fxpad" data-fx="filter">FILTER<small>上＝シャカシャカ／下＝こもる</small></button>
+        <button class="fxpad" data-fx="stutter">STUTTER<small>同じところをくり返す</small></button>
+        <button class="fxpad" data-fx="reverb">REVERB<small>響きを足す</small></button>
+        <button class="fxpad" data-fx="crush">CRUSH<small>ザラザラにする</small></button>
+      </div>
+      <p><strong>Koala で：</strong>PERFORM の画面で再生し、エフェクトのバーを<strong>押して指をすべらせ</strong>ます。離すと止まります。<strong>HOLD</strong> を押すと、離してもかかったままになります。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <ul>
+        <li>FILTER：下へ動かすと、こもって遠くなる。上へ動かすと、低音が抜けてシャカシャカに。サビの前に下から上へ動かすと、盛り上がりが作れる</li>
+        <li>STUTTER：「ダダダダ」と同じ所がくり返される。区切りの直前に</li>
+        <li>REVERB：広い場所で鳴っているように。ブレイクで使うと空気感が出る</li>
+        <li>CRUSH：古いゲーム機のような、ザラザラした音に</li>
+      </ul>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>演奏しながら指でかけるエフェクトを、この教材では<span class="term">パフォームエフェクト</span>と呼びます。Koala には16種類あり、同時に全部かけることもできます。かけっぱなしにするのが <span class="term">HOLD</span>。音は左上から右下の順にエフェクトを通ります（公式マニュアルより）。</p>
+    </div>
+
+    <div class="task" data-task="fx">
+      <h3>耳で当てる：どのエフェクト？</h3>
+      <p>途中からエフェクトがかかります。どれでしょう。4問中3問でクリア。</p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <div class="btn-row">
+        <button class="chip" data-a="filter" disabled>FILTER</button><button class="chip" data-a="stutter" disabled>STUTTER</button>
+        <button class="chip" data-a="reverb" disabled>REVERB</button><button class="chip" data-a="crush" disabled>CRUSH</button>
+      </div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" data-start>はじめる</button><button class="btn sub" data-replay disabled>もう一度聞く</button></div>
+    </div>
+  </section>
+
+  <!-- 課題 -->
+  <section class="card" id="tasks">
+    <div class="num final-num">章末課題</div>
+    <h2>通して演奏できる</h2>
+    <div class="task" data-task="check">
+      <ul class="checks">
+        <li><label><input type="checkbox" data-item="seqs"> Koala にシーケンスが3つ以上ある（いつもの・ブレイク・サビ など）</label></li>
+        <li><label><input type="checkbox" data-item="perform"> PERFORM で、構成表の順にシーケンスを切り替えて最後まで演奏できた</label></li>
+        <li><label><input type="checkbox" data-item="fx"> 演奏中に、エフェクトを1つ以上使った（HOLD も試した）</label></li>
+        <li><label><input type="checkbox" data-item="save"> 保存した</label></li>
+      </ul>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+    </div>
+  </section>
+
+  <section class="card" id="cando">
+    <h2>できるようになったこと</h2>
+    <ul class="toc" id="candoList"></ul>
+    <div class="btn-row"><button class="btn sub" id="resetCh">この章の記録を消す</button></div>
+  </section>
+
+  <section class="card">
+    <p>次は <a href="ch07.html"><strong>第7章 書き出して完成</strong></a>。演奏を録音して、1つの音楽ファイルにします。</p>
+    <p class="muted"><small>参考：<a href="https://manual.koalasampler.com/tablet/5-sequence/" target="_blank" rel="noopener">公式マニュアル「Sequence」（5.3・5.4）</a>・<a href="https://manual.koalasampler.com/tablet/6-perform/" target="_blank" rel="noopener">「Perform」</a>・<a href="https://manual.koalasampler.com/tablet/9-effects/" target="_blank" rel="noopener">「Effects」</a>（英語）</small></p>
+    <p><a href="../index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="../js/ch06.js"></script>
+</body>
+</html>

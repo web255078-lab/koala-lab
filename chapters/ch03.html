@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>第3章 音を整える | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="koala">
+<main>
+  <header class="chapter-head">
+    <div class="meta">第3章 ・ 約30分 ・ iPad の Koala Sampler（無料の機能だけ）</div>
+    <h1>音を整える</h1>
+    <div class="progress-bar" aria-label="この章の進み具合"><i id="chbar" style="width:0%"></i></div>
+  </header>
+
+  <section class="card">
+    <p>集めた音は、そのままだと「録り始めの無音」や「おしりの雑音」がついていたり、大きさがバラバラだったりします。この章では、パッドの音を<strong>使いやすい形に整えます</strong>。</p>
+    <p>各節に「<strong>ブラウザで試す</strong>」があります。先にこのページで耳と目で確かめてから、Koala で同じことをやると分かりやすいです。</p>
+  </section>
+
+  <!-- 3-1 -->
+  <section class="card lesson" id="l1" data-try="try1">
+    <div class="num">3-1</div>
+    <h2>余計なところを切る</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>下の音は、録り始めに少し無音があって、おしりに雑音が入っています。2本のつまみで、<strong>オレンジの線</strong>（使う範囲の始まりと終わり）を動かして、▶で聞いてください。</p>
+      <canvas class="wave" id="trimWave"></canvas>
+      <div class="form-row">
+        <label>始まり <input type="range" id="trimStart" min="0" max="1000" value="0"></label>
+        <label>終わり <input type="range" id="trimEnd" min="0" max="1000" value="1000"></label>
+        <button class="btn sub" id="trimPlay">▶ 聞く</button>
+      </div>
+      <p><strong>Koala で：</strong>第2章で自分の声を録ったパッドを選び、<strong>EDIT</strong> を押します。波形の上の<strong>赤い範囲の左右の端</strong>を指で引っぱると、使う範囲が変わります。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>始まりを音の立ち上がりのすぐ手前に合わせると、叩いた瞬間に音が出るようになりました。無音が残っていると、叩いてから一瞬遅れて鳴るので、リズムがずれて聞こえます。終わりを縮めると、おしりの雑音が消えました。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>使う範囲を切り出すことを<span class="term">トリム</span>、ぴったり音の頭から鳴るようにすることを<span class="term">頭出し</span>といいます。画面の山の形は、第1部でも出てきた<span class="term">波形</span>です。</p>
+    </div>
+
+    <div class="task" data-task="trim">
+      <h3>課題 3-1　頭出しチャレンジ</h3>
+      <p>上の音で、<strong>始まりを音が鳴り始めるところぴったり</strong>に、<strong>終わりを雑音が始まる前</strong>に合わせて「判定」。</p>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+      <div class="btn-row"><button class="btn" id="trimJudge">判定</button></div>
+    </div>
+  </section>
+
+  <!-- 3-2 -->
+  <section class="card lesson" id="l2" data-try="try2">
+    <div class="num">3-2</div>
+    <h2>鳴り方を決める</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>下の大きなパッドを、<strong>ちょんと叩く</strong>のと<strong>押しっぱなし</strong>で比べてください。上のスイッチを切り替えると、鳴り方が変わります。</p>
+      <div class="btn-row" id="modeChips">
+        <button class="chip" data-mode="oneshot">ワンショット</button>
+        <button class="chip" data-mode="reverse">逆再生</button>
+        <button class="chip" data-mode="loop">くり返し</button>
+      </div>
+      <button class="bigpad" id="bigPad">押す</button>
+      <p class="muted"><small>音は「コード（Am）」。ワンショットが OFF のときは、押している間だけ鳴ります。</small></p>
+      <p><strong>Koala で：</strong>好きなパッドの <strong>EDIT</strong> を開き、<strong>ONE SHOT</strong>・<strong>REVERSE</strong>・<strong>LOOP</strong> を順に入れて叩いてみてください。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <ul>
+        <li>ワンショット ON：ちょんと叩いても最後まで鳴る（ドラム向き）</li>
+        <li>ワンショット OFF：指を離すと止まる（長い音を、好きな長さで切りたいとき）</li>
+        <li>逆再生：音が後ろから前へ。じわっとふくらんで、パッと消える不思議な音に</li>
+        <li>くり返し：押している間、音が回り続ける</li>
+      </ul>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>叩くと最後まで鳴るのが<span class="term">ワンショット</span>、逆再生は<span class="term">リバース</span>、くり返しは<span class="term">ループ</span>。Koala の LOOP には、行って戻る PING PONG などの種類もあります。</p>
+    </div>
+  </section>
+
+  <!-- 3-3 -->
+  <section class="card lesson" id="l3" data-try="try3">
+    <div class="num">3-3</div>
+    <h2>高さ・大きさ・左右</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>キックの高さを変えて叩いてみてください。波形の<strong>長さ</strong>にも注目です。</p>
+      <div class="form-row">
+        <label>高さ <input type="range" id="pitch" min="-12" max="12" step="1" value="0"></label>
+        <b id="pitchVal">0</b><span class="muted">半音</span>
+        <button class="btn sub" id="pitchPlay">▶ 叩く</button>
+      </div>
+      <canvas class="wave" id="pitchWave"></canvas>
+      <p><strong>Koala で：</strong>パッドを選ぶと出る <strong>VOL</strong>（大きさ）・<strong>PITCH</strong>（高さ）・<strong>PAN</strong>（左右）を、<strong>押したまま指をすべらせて</strong>動かします。2回たたくと元に戻ります。EDIT の中の <strong>TONE</strong>（左に回すとこもる、右に回すとシャカシャカに）も試してください。</p>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>ブラウザでは、高さを下げると音が<strong>低く、長く</strong>なり、上げると<strong>高く、短く</strong>なりました。音を遅く再生すると低く長く、速く再生すると高く短くなるからです。キックを少し下げると、重く太い音になります。</p>
+      <div class="check-hw" data-label="要確認">Koala の PITCH でも長さが変わるか（高さだけ変えて長さを保つのは有料の Samurai の STRETCH 機能）は、公式マニュアルに書かれていません。耳で確かめてください。</div>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>高さは<span class="term">ピッチ</span>、大きさは<span class="term">ボリューム</span>、左右の位置は<span class="term">パン</span>。TONE は、第1部（FM-1ラボ）の「明るさ」と同じ<span class="term">フィルター</span>です。</p>
+      <p>ビートでは、<strong>キックとスネアを大きく、ハイハットは控えめ</strong>にするのが基本のバランスです。</p>
+    </div>
+  </section>
+
+  <!-- 3-4 -->
+  <section class="card lesson" id="l4" data-try="try4">
+    <div class="num">3-4</div>
+    <h2>ハイハットのけんか</h2>
+    <div class="step try"><span class="tag">やってみる</span>
+      <p><strong>ブラウザで試す：</strong>「シャーン（開いたハット）」のすぐあとに「チッ（閉じたハット）」が来るリズムです。スイッチを切り替えて聞き比べてください。</p>
+      <div class="btn-row">
+        <button class="btn sub" id="chokePlay">▶ 流す</button>
+        <button class="chip" id="chokeBtn">止め合う：OFF</button>
+      </div>
+      <p><strong>Koala で：</strong>第2章で入れたハイハットの閉と開の両方で <strong>EDIT</strong> を開き、<strong>CHOKE</strong> を<strong>同じ番号</strong>（たとえば 1）にします。開いたハットを叩いてすぐ閉じたハットを叩くと…？</p>
+      <div class="caution">第2章の素材キットでは「ハイハット（開）」を保存していなければ、2-3 で保存してバンク A の4番に入れてください。</div>
+      <div class="btn-row"><button class="btn" data-did>Koala でやってみた</button></div>
+      <p class="feedback" data-fb></p>
+    </div>
+    <button class="btn sub reveal-btn" data-reveal>先に答えを読む</button>
+    <div class="step what"><span class="tag">何が起きたか</span>
+      <p>止め合う OFF では、「シャーン」が鳴り続けたまま「チッ」が重なって、もやもやしました。ON にすると、「チッ」が鳴った瞬間に「シャーン」がピタッと止まり、本物のドラムのような歯切れになりました。本物のハイハットも、足でペダルを踏んで閉じると響きが止まります。</p>
+    </div>
+    <div class="step name"><span class="tag">それの名前</span>
+      <p>同じグループの音どうしが止め合う仕組みを<span class="term">チョーク</span>（チョークグループ）といいます。Koala には6つのグループがあります。</p>
+    </div>
+  </section>
+
+  <!-- 課題 -->
+  <section class="card" id="tasks">
+    <div class="num final-num">章末課題</div>
+    <h2>整える耳と手</h2>
+
+    <div class="task" data-task="ear">
+      <h3>耳で当てる：どう変えた？</h3>
+      <p>「ポン」の音を、そのまま・逆再生・高く・低く のどれかで鳴らします。6問中5問でクリア。</p>
+      <div><span class="status">未挑戦</span><span class="dots"></span></div>
+      <div class="btn-row" data-answers>
+        <button class="chip" data-a="normal" disabled>そのまま</button>
+        <button class="chip" data-a="reverse" disabled>逆再生</button>
+        <button class="chip" data-a="up" disabled>高く</button>
+        <button class="chip" data-a="down" disabled>低く</button>
+      </div>
+      <p class="feedback"></p>
+      <div class="btn-row">
+        <button class="btn" data-start>はじめる</button>
+        <button class="btn sub" data-replay disabled>もう一度聞く</button>
+        <button class="btn sub" data-ref disabled>そのままの音</button>
+      </div>
+    </div>
+
+    <div class="task" data-task="check">
+      <h3>Koala のパッドがこうなっていればOK</h3>
+      <ul class="checks">
+        <li><label><input type="checkbox" data-item="trim"> 自分で録った声を、頭出しして余計なところを切った</label></li>
+        <li><label><input type="checkbox" data-item="choke"> ハイハットの閉と開を、同じ CHOKE 番号にした</label></li>
+        <li><label><input type="checkbox" data-item="vol"> キックとスネアをしっかり、ハイハットは控えめの音量にした</label></li>
+        <li><label><input type="checkbox" data-item="fun"> どれか1つの音を、REVERSE か PITCH で「自分だけの音」にした</label></li>
+      </ul>
+      <div><span class="status">未挑戦</span></div>
+      <p class="feedback"></p>
+    </div>
+  </section>
+
+  <section class="card" id="cando">
+    <h2>できるようになったこと</h2>
+    <ul class="toc" id="candoList"></ul>
+    <div class="btn-row"><button class="btn sub" id="resetCh">この章の記録を消す</button></div>
+  </section>
+
+  <section class="card">
+    <p>次は <a href="ch04.html"><strong>第4章 ビートを打ち込む</strong></a>。整えた音を並べて、ビートにします。</p>
+    <p class="muted"><small>参考：<a href="https://manual.koalasampler.com/tablet/4-sample/" target="_blank" rel="noopener">公式マニュアル「Sample」（4.6 Sample Controls・4.7 Sample Editor）</a>（英語）</small></p>
+    <p><a href="../index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="../js/ch03.js"></script>
+</body>
+</html>
