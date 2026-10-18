@@ -1,6 +1,6 @@
 // オフライン対応：最初に全部をしまっておく。つながっていれば最新を取りに行き、だめならしまったものを出す。
 // ファイルを増やしたら PRECACHE に足し、VERSION を上げる。
-const VERSION = 'koalalab-v5';
+const VERSION = 'koalalab-v6';
 const PRECACHE = [
   './', './index.html', './check.html', './js/check.js', './chapters/ch01.html', './chapters/ch02.html', './chapters/ch03.html',
   './chapters/ch04.html', './chapters/ch05.html', './chapters/ch06.html', './chapters/ch07.html',
@@ -23,7 +23,7 @@ self.addEventListener('install', (e) => {
   e.waitUntil(precache().then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k.startsWith('koalalab-') && k !== VERSION).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
 });
 
 // 電波が弱いときに待たされすぎないよう、4秒で見切ってしまったものを出す

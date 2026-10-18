@@ -2,6 +2,7 @@
 // 項目と枠の作り方は core/checks.js（章の本文と同じもの）。
 import { mountShell, $, esc } from './core/klesson.js';
 import { VERIFY, renderVerify, loadChecks, report, setVersion } from './core/checks.js';
+import { clearWithTrash } from './core/store.js';
 
 mountShell({ root: '.', title: '要確認チェック' });
 
@@ -34,8 +35,8 @@ $('#copyBtn').addEventListener('click', async () => {
   }
 });
 $('#clearBtn').addEventListener('click', () => {
-  if (!confirm('要確認チェックの記録を消しますか？')) return;
-  localStorage.removeItem(Object.keys(localStorage).find((k) => k.endsWith('.checks')) || '');
+  if (!confirm('要確認チェックの記録を消しますか？（控えは残ります）')) return;
+  clearWithTrash('checks');
   location.reload();
 });
 refresh();

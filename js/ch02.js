@@ -106,7 +106,7 @@ renderKit();
 
 // ---------- 集め方クイズ ----------
 ch.quiz('quiz', [
-  { q: 'マイクで録るには、空いているパッドをどうする？', options: ['1回タップ', '押しっぱなしにして、離すと止まる', '2回タップ'], answer: 1, explain: '押している間だけ録音されます。' },
+  { q: 'マイクで録るには、空いているパッドをどうする？（設定の Hold to record が ON のとき）', options: ['1回タップ', '押しっぱなしにして、離すと止まる', '2回タップ'], answer: 1, explain: 'OFF のときは、タップで開始・もう一度タップで停止です。' },
   { q: 'ライブラリのドラムセット16個を一度に入れる操作は？', options: ['LOAD KIT', 'SAVE AS', 'IMPORT VIDEO'], answer: 0, explain: '表示中のバンクを上書きするので、空のバンクで。' },
   { q: 'スマホに保存した WAV ファイルを取り込むのは？', options: ['PERFORM の画面', 'MENU の IMPORT AUDIO', 'SEQUENCE の録音ボタン'], answer: 1, explain: 'ファイルの取り込みは MENU から。' },
   { q: '動画の音だけを取り出したいときは？', options: ['IMPORT VIDEO', 'LOAD KIT', 'MONITOR'], answer: 0, explain: 'MENU の IMPORT VIDEO で、動画の音がパッドに入ります。' },

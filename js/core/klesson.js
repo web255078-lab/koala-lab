@@ -127,7 +127,9 @@ export function createChapter(o) {
     function ask() {
       const q = questions[order[i]];
       st.textContent = `${i + 1} / ${order.length}`;
-      box.innerHTML = `<p class="quiz-q quiz-q-sm">${q.q}</p><div class="btn-row">${q.options.map((op, k) => `<button class="chip" data-k="${k}">${op}</button>`).join('')}</div>`;
+      // 選択肢は毎回並べ替える（いつも同じ位置が正解にならないように）。data-k は元の番号
+      const shown = q.options.map((_, k) => k).sort(() => Math.random() - 0.5);
+      box.innerHTML = `<p class="quiz-q quiz-q-sm">${q.q}</p><div class="btn-row">${shown.map((k) => `<button class="chip" data-k="${k}">${q.options[k]}</button>`).join('')}</div>`;
       fb.textContent = ''; fb.className = 'feedback';
     }
     box.addEventListener('click', async (e) => {
