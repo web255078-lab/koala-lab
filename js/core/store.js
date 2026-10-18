@@ -144,7 +144,7 @@ export async function askPersist() {
 
 // ---- バックアップ（書き出し・読み込み） ----
 // 読み込みは「合体」だけ。今ある記録は消さない・古くしない。
-const BACKUP_KEYS = ['progress', 'findings', 'presets', 'fwlog', 'settings', 'fw', 'fwver', 'trash', 'plan', 'review'];
+const BACKUP_KEYS = ['progress', 'findings', 'presets', 'fwlog', 'settings', 'fw', 'fwver', 'trash', 'plan', 'review', 'checks'];
 
 export function exportAll() {
   const data = {};
@@ -205,7 +205,7 @@ export function importMerge(obj) {
   }
   // 設定などは、今ないものだけ補う（つないでいる機器の設定を上書きしない）
   if (d.settings) write('settings', { ...d.settings, ...read('settings', {}) });
-  for (const k of ['fw', 'fwver', 'plan', 'review']) if (d[k] !== undefined && read(k, undefined) === undefined) write(k, d[k]);
+  for (const k of ['fw', 'fwver', 'plan', 'review', 'checks']) if (d[k] !== undefined && read(k, undefined) === undefined) write(k, d[k]);
   if (d.trash) write('trash', { ...d.trash, ...read('trash', {}) });
   return counts;
 }

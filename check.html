@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>要確認チェック | コアラ・ラボ</title>
+<meta name="theme-color" content="#3f8f6b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="koala">
+<main>
+  <h1>要確認チェック</h1>
+  <p>教材の中で【要確認】にしている所を、<strong>iPad の Koala で実際に見て</strong>記録するページです。選ぶだけ・ひとこと書くだけでOK。記録はこのブラウザに保存されます。</p>
+  <p>全部（または分かった所だけ）できたら、いちばん下の「<strong>結果をコピー</strong>」を押して、教材づくりの相談に貼り付けてください。それをもとに本文を直します。</p>
+
+  <section class="card">
+    <h2>あなたの環境</h2>
+    <dl class="kv" id="env"></dl>
+    <div class="form-row">
+      <label>Koala のバージョン <input type="text" id="koalaVer" size="10" placeholder="例 2.0.15"></label>
+    </div>
+    <p class="muted"><small>Koala のバージョンは、App Store の Koala Sampler のページの「バージョン履歴」で分かります。</small></p>
+  </section>
+
+  <div id="items"></div>
+
+  <section class="card">
+    <h2>結果</h2>
+    <p class="muted" id="countText"></p>
+    <div class="btn-row">
+      <button class="btn" id="copyBtn">結果をコピー</button>
+      <button class="btn sub" id="clearBtn">記録を消す</button>
+    </div>
+    <p class="feedback" id="copyFb"></p>
+    <details><summary>コピーされる文章を見る</summary><pre class="preview" id="preview"></pre></details>
+    <p><a href="index.html">目次にもどる</a></p>
+  </section>
+</main>
+<script type="module" src="js/check.js"></script>
+</body>
+</html>

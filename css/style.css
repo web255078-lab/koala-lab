@@ -355,3 +355,6 @@ canvas.wave { width: 100%; height: 90px; border-radius: 10px; display: block; ma
 @media (max-width: 520px) { .ss-row, .qrow { grid-template-columns: 3.6em repeat(var(--steps, 32), minmax(14px, 1fr)); } }
 
 .pill.offline { cursor: default; font-size: 0.78rem; }
+
+.check-item.done { outline: 2px solid var(--ok); }
+pre.preview { white-space: pre-wrap; font-size: 0.8rem; background: var(--surface-2); padding: 10px; border-radius: 8px; overflow-wrap: anywhere; }

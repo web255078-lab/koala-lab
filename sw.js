@@ -1,8 +1,8 @@
 // オフライン対応：最初に全部をしまっておく。つながっていれば最新を取りに行き、だめならしまったものを出す。
 // ファイルを増やしたら PRECACHE に足し、VERSION を上げる。
-const VERSION = 'koalalab-v3';
+const VERSION = 'koalalab-v4';
 const PRECACHE = [
-  './', './index.html', './chapters/ch01.html', './chapters/ch02.html', './chapters/ch03.html',
+  './', './index.html', './check.html', './js/check.js', './chapters/ch01.html', './chapters/ch02.html', './chapters/ch03.html',
   './chapters/ch04.html', './chapters/ch05.html', './chapters/ch06.html', './chapters/ch07.html',
   './css/style.css', './manifest.webmanifest', './icons/icon.svg',
   './js/index.js', './js/ch01.js', './js/ch02.js', './js/ch03.js', './js/ch04.js', './js/ch05.js', './js/ch06.js', './js/ch07.js',
